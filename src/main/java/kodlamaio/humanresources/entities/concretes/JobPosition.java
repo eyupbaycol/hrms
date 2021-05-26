@@ -1,7 +1,14 @@
 package kodlamaio.humanresources.entities.concretes;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name="job_positions")
 public class JobPosition {
@@ -10,30 +17,10 @@ public class JobPosition {
     @Column(name="id")
     private int id;
 
-    @Column(name="position")
+    @Column(name="job_position")
     private String position;
 
-    public JobPosition() {
-    }
+    @Column(name = "is_active")
+    private char isActive;
 
-    public JobPosition(int id, String position) {
-        this.id = id;
-        this.position = position;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getPosition() {
-        return position;
-    }
-
-    public void setPosition(String position) {
-        this.position = position;
-    }
 }
