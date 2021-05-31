@@ -35,9 +35,9 @@ public class EmployerManager implements EmployerService {
         if(!baseRegisterController.isValidEmail(employerDTO.getEmail())){
             return new ErrorResult("Lütfen geçerli bir mail adresi giriniz");
         }
-        if(!baseRegisterController.isValidCompanyMail(employerDTO.getCompanyWebsite(),employerDTO.getEmail())){
-            return new ErrorResult("Lütfen geçerli bir şirket mail adresi giriniz");
-        }
+//        if(!baseRegisterController.isValidCompanyMail(employerDTO.getCompanyWebsite(),employerDTO.getEmail())){
+//            return new ErrorResult("Lütfen geçerli bir şirket mail adresi giriniz");
+//        }
         User user = new User(
                 employerDTO.getEmail(),
                 employerDTO.getPassword(),
